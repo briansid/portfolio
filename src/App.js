@@ -95,16 +95,16 @@ function App() {
                 <p className="text-sm hover:text-primary text-white">Contact</p>
               </a>
             </li>
-            {/* <li className="mt-10 cursor-pointer">
+            <li className="mt-10 cursor-pointer">
               <a
-                className="flex justify-center w-full items-center transition duration-500 ease-in-out text-white border bg-green_light border-green_light hover:bg-green_dark px-4 py-2 rounded"
-                href="/start-a-project"
+                className="flex justify-center w-full items-center transition duration-400 ease-in-out text-white border bg-cyan-500 border-cyan-400 hover:bg-cyan-500 px-4 py-2 rounded"
+                href="mailto:valery@reactvs.com"
               >
                 <p className="text-sm font-medium leading-6 ">
                   Start Your Project
                 </p>
               </a>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>
@@ -122,7 +122,7 @@ function App() {
             >
               <div className="logo-image cursor-pointer">
                 <img
-                  src="/images/logo.svg"
+                  src="images/logo.svg"
                   alt="Valery Sid Logo Image"
                   className="w-20"
                 />
@@ -190,12 +190,12 @@ function App() {
                         </p>
                       </a>
                     </li>
-                    {/* <li className="ml-10 cursor-pointer">
+                    <li className="ml-10 cursor-pointer">
                       <a
-                        className="flex justify-center w-full items-center transition duration-500 ease-in-out bg-green_light text-white border border-green_light hover:bg-green_dark px-4 py-2 rounded"
-                        href="/start-a-project"
+                        className="flex justify-center w-full items-center transition duration-500 ease-in-out bg-cyan-400 text-white border border-cyan-400 hover:bg-cyan-500 px-4 py-2 rounded"
+                        href="mailto:valerii.sydorchuk@gmail.clm"
                       >
-                        <p className="text-sm font-medium leading-6">
+                        <p className="text-sm font-medium leading-6 ">
                           Start Your Project
                         </p>
                         <span className="flex absolute h-3 w-3 top-2 right-0 -mr-1">
@@ -203,7 +203,7 @@ function App() {
                           <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
                         </span>
                       </a>
-                    </li> */}
+                    </li>
                   </ul>
                 </div>
                 <div className="xl:hidden block">
@@ -252,7 +252,7 @@ function App() {
               <div className="block md:hidden w-full">
                 <div className="flex justify-center mb-8 md:mb-0">
                   <img
-                    src="/images/container_image.png"
+                    src="images/container_image.png"
                     alt="Engineer's Profissional Desk Setup"
                     className="w-auto h-72"
                   />
@@ -273,7 +273,7 @@ function App() {
               <div className="hidden md:block w-1/3">
                 <div className="flex justify-center">
                   <img
-                    src="/images/container_image.png"
+                    src="images/container_image.png"
                     alt="Engineer's Profissional Desk Setup"
                     className="w-auto h-auto"
                   />
@@ -296,7 +296,7 @@ function App() {
                           <div className="flex">
                             <img
                               className="rounded-md object-cover object-center w-full h-full"
-                              src="/images/me.jpeg"
+                              src="images/me.jpeg"
                               alt="Valery Sid Photo"
                             />
                           </div>
@@ -621,7 +621,7 @@ function App() {
                       <li className="flex flex-col justify-around items-center bg-gray-100 mb-2 mr-2 pt-1 pb-1 pl-4 pr-4 rounded hover:bg-gray-200 text-sm text-secondary transition duration-500 ease-in-out">
                         <img
                           className="w-10"
-                          src="/images/material-ui-logo.svg"
+                          src="images/material-ui-logo.svg"
                           alt=""
                         />
                         Material UI
@@ -720,16 +720,19 @@ function App() {
                   Testimonials
                 </h3>
                 <ul className="flex flex-wrap w-full">
-                  {reviews.map((review) => (
-                    <li className="md:flex mb-1 bg-slate-100 rounded-xl px-6 dark:bg-slate-800">
+                  {reviews.map((review, idx) => (
+                    <li
+                      key={idx}
+                      className="md:flex mb-5 bg-slate-100 rounded-xl px-6 py-3 dark:bg-slate-800"
+                    >
                       <img
-                        className="w-24 h-24 md:mt-10 rounded-full mx-auto"
-                        src={`/images/${review.image}`}
+                        className="w-24 h-24 md:mt-10 relative bottom-7 md:bottom-0 rounded-full mx-auto"
+                        src={`images/${review.image}`}
                         alt=""
                         width="384"
                         height="512"
                       />
-                      <div className="pt-6 md:p-8 text-center space-y-4">
+                      <div className="pt-6 md:p-8 pt-0 text-center space-y-4">
                         <blockquote>
                           <p className="text-lg italic">{`“${review.text}”`}</p>
                         </blockquote>
@@ -764,9 +767,9 @@ function App() {
                     an interesting project, feel free to get in touch!
                   </p>
                   <div className="email mt-8">
-                    <a href="mailto:valerii.sydorchuk@gmail.com">
+                    <a href="mailto:valery@reactvs.com">
                       <p className="text-sm text-secondary leading-6 font-medium underline">
-                        valerii.sydorchuk@gmail.com
+                        valery@reactvs.com
                       </p>
                     </a>
                   </div>
