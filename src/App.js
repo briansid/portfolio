@@ -861,10 +861,7 @@ function App() {
                         </a>
                       </li>
                       <li className="pl-4">
-                        <a
-                          href="https://github.com/nadeengamage"
-                          target="_blank"
-                        >
+                        <a href="https://github.com/briansid" target="_blank">
                           <svg
                             className="fill-current hover:fill-current hover:text-secondary transition duration-500 ease-in-out"
                             xmlns="http://www.w3.org/2000/svg"
