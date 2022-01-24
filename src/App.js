@@ -8,6 +8,26 @@ function App() {
     window.location.href = `#${id}`;
   };
 
+  function shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
+
   const reviews = [
     {
       name: "Dean Arnold",
@@ -29,9 +49,27 @@ function App() {
     },
     {
       name: "Danny G",
-      image: "david.jpeg",
+      image: "Danny.jpeg",
       company: "Sponsino, Germany",
       text: "Valeriy did a perfect work. He has done a free of charge sample within short time. The communication was perfect and also the result. I can recommend him to 100%.",
+    },
+    {
+      name: "David Daniels",
+      image: "david.jpeg",
+      company: "Bronote, United States",
+      text: "Great to work with. Understood the assignment and was flexible to complete changes.",
+    },
+    {
+      name: "Ariel Aziernicki",
+      image: "ariel.jpg",
+      company: "Zageno, Germany",
+      text: "Valeriy delivered an excellent job. He is a great developer and he was always available to provide all the support we needed. I totally recommend him.",
+    },
+    {
+      name: "Jeff Friesen",
+      image: "jeff.jpeg",
+      company: "Radiant Labs, United States",
+      text: "He was very quick and new his stuff. Looking for more projects to work with him on.",
     },
   ];
 
@@ -252,9 +290,9 @@ function App() {
               <div className="block md:hidden w-full">
                 <div className="flex justify-center mb-8 md:mb-0">
                   <img
-                    src="images/container_image.png"
+                    src="images/react_logo2.png"
                     alt="Engineer's Profissional Desk Setup"
-                    className="w-auto h-72"
+                    className="w-auto"
                   />
                 </div>
               </div>
@@ -273,7 +311,7 @@ function App() {
               <div className="hidden md:block w-1/3">
                 <div className="flex justify-center">
                   <img
-                    src="images/container_image.png"
+                    src="images/react_logo1.png"
                     alt="Engineer's Profissional Desk Setup"
                     className="w-auto h-auto"
                   />
@@ -605,6 +643,14 @@ function App() {
                       <li className="flex flex-col justify-around items-center bg-gray-100 mb-2 mr-2 pt-1 pb-1 pl-4 pr-4 rounded hover:bg-gray-200 text-sm text-secondary transition duration-500 ease-in-out">
                         <img
                           className="w-10"
+                          src="images/Vue.js_Logo_2.svg"
+                          alt=""
+                        />
+                        Vue.js
+                      </li>
+                      <li className="flex flex-col justify-around items-center bg-gray-100 mb-2 mr-2 pt-1 pb-1 pl-4 pr-4 rounded hover:bg-gray-200 text-sm text-secondary transition duration-500 ease-in-out">
+                        <img
+                          className="w-10"
                           src="images/nextjs-logo.svg"
                           alt=""
                         />
@@ -720,33 +766,35 @@ function App() {
                   Testimonials
                 </h3>
                 <ul className="flex flex-wrap w-full">
-                  {reviews.map((review, idx) => (
-                    <li
-                      key={idx}
-                      className="md:flex mb-5 bg-slate-100 rounded-xl px-6 py-3 dark:bg-slate-800"
-                    >
-                      <img
-                        className="w-24 h-24 md:mt-10 relative bottom-7 md:bottom-0 rounded-full mx-auto"
-                        src={`images/${review.image}`}
-                        alt=""
-                        width="384"
-                        height="512"
-                      />
-                      <div className="pt-6 md:p-8 pt-0 text-center space-y-4">
-                        <blockquote>
-                          <p className="text-lg italic">{`“${review.text}”`}</p>
-                        </blockquote>
-                        <figcaption className="font-medium">
-                          <div className="text-sky-500 dark:text-sky-400">
-                            {review.name}
-                          </div>
-                          <div className="text-slate-700 dark:text-slate-500">
-                            {review.company}
-                          </div>
-                        </figcaption>
-                      </div>
-                    </li>
-                  ))}
+                  {shuffle(reviews)
+                    .slice(3)
+                    .map((review, idx) => (
+                      <li
+                        key={idx}
+                        className="md:flex mb-5 bg-slate-100 rounded-xl px-6 py-3 dark:bg-slate-800"
+                      >
+                        <img
+                          className="w-24 h-24 md:mt-10 relative bottom-7 md:bottom-0 rounded-full mx-auto"
+                          src={`images/${review.image}`}
+                          alt=""
+                          width="384"
+                          height="512"
+                        />
+                        <div className="pt-6 md:p-8 pt-0 text-center space-y-4">
+                          <blockquote>
+                            <p className="text-lg italic">{`“${review.text}”`}</p>
+                          </blockquote>
+                          <figcaption className="font-medium">
+                            <div className="text-sky-500 dark:text-sky-400">
+                              {review.name}
+                            </div>
+                            <div className="text-slate-700 dark:text-slate-500">
+                              {review.company}
+                            </div>
+                          </figcaption>
+                        </div>
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
