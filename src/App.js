@@ -136,7 +136,7 @@ function App() {
             <li className="mt-10 cursor-pointer">
               <a
                 className="flex justify-center w-full items-center transition duration-400 ease-in-out text-white border bg-cyan-500 border-cyan-400 hover:bg-cyan-500 px-4 py-2 rounded"
-                href="mailto:valery@reactvs.com"
+                href="mailto:sid.gamer@gmail.com"
               >
                 <p className="text-sm font-medium leading-6 ">
                   Start Your Project
@@ -231,7 +231,7 @@ function App() {
                     <li className="ml-10 cursor-pointer">
                       <a
                         className="flex justify-center w-full items-center transition duration-500 ease-in-out bg-cyan-400 text-white border border-cyan-400 hover:bg-cyan-500 px-4 py-2 rounded"
-                        href="mailto:valerii.sydorchuk@gmail.clm"
+                        href="mailto:sid.gamer@gmail.com"
                       >
                         <p className="text-sm font-medium leading-6 ">
                           Start Your Project
@@ -815,9 +815,9 @@ function App() {
                     an interesting project, feel free to get in touch!
                   </p>
                   <div className="email mt-8">
-                    <a href="mailto:valery@reactvs.com">
+                    <a href="mailto:sid.gamer@gmail.com">
                       <p className="text-sm text-secondary leading-6 font-medium underline">
-                        valery@reactvs.com
+                        Contact me
                       </p>
                     </a>
                   </div>
